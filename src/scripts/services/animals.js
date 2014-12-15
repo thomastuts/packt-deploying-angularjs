@@ -20,4 +20,8 @@ angular.module('packt')
       return undefined;
     };
 
+    Animals.getRandomAnimal = function () {
+      return ANIMALS_COLLECTION[Math.floor(Math.random() * ANIMALS_COLLECTION.length)];
+    };
+
   });

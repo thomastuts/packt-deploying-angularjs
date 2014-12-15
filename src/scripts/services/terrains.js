@@ -20,4 +20,9 @@ angular.module('packt')
       return undefined;
     };
 
+    Terrains.getRandomTerrain = function () {
+      return TERRAINS_COLLECTION[Math.floor(Math.random() * TERRAINS_COLLECTION.length)];
+    };
+
+
   });
