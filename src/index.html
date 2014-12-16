@@ -6,12 +6,20 @@
   <link rel="stylesheet" href="styles/app.css"/>
 </head>
 <body>
-  <h1>Hello deploying AngularJS! Awesome!</h1>
+
+  <ui-view></ui-view>
 
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 
   <script src="scripts/app.js"></script>
+  <script src="scripts/constants/animals-collection.js"></script>
+  <script src="scripts/constants/terrains-collection.js"></script>
   <script src="scripts/services/storage.js"></script>
+  <script src="scripts/services/animals.js"></script>
+  <script src="scripts/services/terrains.js"></script>
+  <script src="scripts/services/arena.js"></script>
+  <script src="scripts/controllers/arena.js"></script>
 </body>
 </html>

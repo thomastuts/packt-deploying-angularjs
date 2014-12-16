@@ -1,0 +1,6 @@
+<div class="loader" ng-show="!arena.matchup">
+  Generating matchup...
+</div>
+<div ng-show="arena.matchup">
+  <pre>{{ arena.matchup | json }}</pre>
+</div>
