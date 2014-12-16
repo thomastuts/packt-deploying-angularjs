@@ -1,0 +1,7 @@
+<ul class="animal-grid">
+  <li ng-repeat="animal in arena.allAnimals"
+      ng-click="arena.selectAnimal(animal)"
+      ng-class="{'selected': arena.isSelected(animal)}">
+    {{ animal.name }}
+  </li>
+</ul>

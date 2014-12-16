@@ -1,8 +1,25 @@
 <div class="loader" ng-show="!arena.matchup">
   Generating matchup...
 </div>
-<div ng-show="arena.matchup">
+<div ng-show="arena.matchup && !arena.matchWinner">
   <div animal-card="arena.matchup.opponent"></div>
   <div terrain-card="arena.matchup.terrain"></div>
-  <pre>{{ arena.matchup | json }}</pre>
+
+  <h3>Choose your animal:</h3>
+  <div animal-grid></div>
+
+  <div ng-show="arena.playerAnimal">
+    <p>
+      You are fighting as a {{ arena.playerAnimal.name }} against a {{ arena.matchup.opponent.name }} in {{ arena.matchup.terrain.name }}.
+    </p>
+
+    <button ng-click="arena.fightMatch()">Fight match</button>
+  </div>
+</div>
+<div ng-show="arena.matchWinner">
+  <p ng-show="arena.matchWinner === 'player'">You won!</p>
+  <p ng-show="arena.matchWinner === 'opponent'">You lost!</p>
+  <p ng-show="arena.matchWinner === 'draw'">Draw!</p>
+
+  <button ng-click="arena.resetMatch()">Play again</button>
 </div>
