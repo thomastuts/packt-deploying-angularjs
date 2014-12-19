@@ -13,10 +13,13 @@
 
   <ui-view></ui-view>
 
+  <!-- build:vendor -->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <!-- endbuild -->
 
+  <!-- build:source -->
   <script src="scripts/app.js"></script>
   <script src="scripts/constants/animals-collection.js"></script>
   <script src="scripts/constants/terrains-collection.js"></script>
@@ -29,5 +32,6 @@
   <script src="scripts/directives/animal-card/animal-card.js"></script>
   <script src="scripts/directives/terrain-card/terrain-card.js"></script>
   <script src="scripts/directives/animal-grid/animal-grid.js"></script>
+  <!-- endbuild -->
 </body>
 </html>
