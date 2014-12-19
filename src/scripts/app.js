@@ -5,7 +5,7 @@ angular
     'LocalStorageModule',
     'ui.router'
   ])
-  .config(function (localStorageServiceProvider, $stateProvider, $urlRouterProvider, foo) {
+  .config(function (localStorageServiceProvider, $stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
