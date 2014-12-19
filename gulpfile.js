@@ -109,3 +109,4 @@ gulp.task('watch', function () {
 gulp.task('build', ['htmlreplace', 'bundle:source', 'bundle:vendor', 'copy:styles']);
 
 gulp.task('default', ['serve']);
+gulp.task('heroku:production', ['build']);
