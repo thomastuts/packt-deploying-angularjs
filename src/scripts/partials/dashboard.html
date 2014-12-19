@@ -1,0 +1,13 @@
+<h2>Previously played matches</h2>
+<ul>
+  <li ng-repeat="match in dashboard.playedMatches">
+    {{ match.player.name }} vs {{ match.opponent.name }} - {{ match.winner }}
+  </li>
+</ul>
+
+<h2>Favorite animals</h2>
+<ul>
+  <li ng-repeat="(animal, count) in dashboard.favoriteAnimals">
+    {{ dashboard.animals.find(animal).name }}: {{ count }} times
+  </li>
+</ul>
