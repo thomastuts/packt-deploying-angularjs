@@ -5,7 +5,7 @@ angular
     'LocalStorageModule',
     'ui.router'
   ])
-  .config(function (localStorageServiceProvider, $stateProvider, $urlRouterProvider) {
+  .config(function (localStorageServiceProvider, $stateProvider, $urlRouterProvider, foo) {
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
@@ -24,3 +24,9 @@ angular
 
     localStorageServiceProvider.setPrefix('packt');
   });
+
+angular.module('exceptionOverride', []).factory('$exceptionHandler', function () {
+  return function (exception, cause) {
+    Bugsnag.notifyException(exception, {diagnostics:{cause: cause}})
+  };
+});
