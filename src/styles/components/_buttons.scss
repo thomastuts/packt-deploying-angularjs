@@ -1,0 +1,21 @@
+@import "../variables";
+
+.btn {
+  background-color: $primary;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+  font-size: 18px;
+  font-weight: 300;
+  box-shadow: 0 0 5px rgba(#000, 0.2);
+
+  &:hover {
+    cursor: pointer;
+    background-color: darken($primary, 5%);
+  }
+}

@@ -1,0 +1,9 @@
+@import "../variables";
+
+.loader {
+  @extend .card;
+  text-align: center;
+  font-size: 28px;
+  color: $primary;
+  font-weight: 300;
+}

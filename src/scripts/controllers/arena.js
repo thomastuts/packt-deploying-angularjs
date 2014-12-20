@@ -24,6 +24,7 @@ angular.module('packt')
     vm.resetMatch = function () {
       vm.matchup = undefined;
       vm.matchWinner = undefined;
+      vm.playerAnimal = undefined;
       generateMatchup();
     };
 

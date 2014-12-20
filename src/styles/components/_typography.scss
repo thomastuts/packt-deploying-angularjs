@@ -1,0 +1,39 @@
+@import "../variables";
+
+body {
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #444;
+  background-color: #efefef;
+  padding-top: 50px;
+}
+
+h2 {
+  font-weight: 300;
+  color: $primary;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+  thead {
+    th {
+      font-weight: 300;
+      color: $light-grey;
+      border-bottom: 1px solid $light-grey;
+      font-size: 11px;
+      text-align: left;
+      padding-bottom: 5px;
+    }
+  }
+
+  tbody {
+    td {
+      padding: 5px 0;
+      font-size: 12px;
+    }
+  }
+}

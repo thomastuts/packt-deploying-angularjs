@@ -1,15 +1,52 @@
-<h2>Previously played matches</h2>
-<ul>
-  <li ng-repeat="match in dashboard.playedMatches">
-    {{ match.player.name }} vs {{ match.opponent.name }} - {{ match.winner }}
-  </li>
-</ul>
+<div class="card">
+  <h2>Previously played matches</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Result</th>
+        <th>You</th>
+        <th>Opponent</th>
+        <th>Terrain</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="match in dashboard.playedMatches">
+        <td>
+          <span class="green" ng-show="match.winner === 'player'">Won</span>
+          <span class="red" ng-show="match.winner === 'opponent'">Lost</span>
+          <span ng-show="match.winner === 'draw'">Draw</span>
+        </td>
+        <td>
+          {{ match.player.name }}
+        </td>
+        <td>
+          {{ match.opponent.name }}
+        </td>
+        <td>
+          {{ match.terrain.name }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-<h2>Favorite animals</h2>
-<ul>
-  <li ng-repeat="(animal, count) in dashboard.favoriteAnimals">
-    {{ dashboard.animals.find(animal).name }}: {{ count }} times
-  </li>
-</ul>
+<div class="card">
+  <h2>Favorite animals</h2>
+  <ul class="avatar-list">
+    <li ng-repeat="(animal, count) in dashboard.favoriteAnimals">
+      <div class="avatar">
+        <img ng-src="images/{{ dashboard.animals.find(animal).id }}.png" class="avatar-image" alt="{{ dashboard.animals.find(animal).name }}"/>
+        <div class="avatar-content">
+          <div class="avatar-title">
+            {{ dashboard.animals.find(animal).name }}
+          </div>
+          <div class="avatar-subtitle">
+            Played {{ count }} times
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
 
-<a ui-sref="arena">Play a match</a>
+<a class="btn" ui-sref="arena">Play a match</a>

@@ -1,10 +1,21 @@
-<div class="card terrain">
-  <div class="photo">
-    <img ng-src="images/{{ terrain.id }}.png" alt=""/>
+<div class="avatar">
+  <img ng-src="images/{{ terrain.id }}.png" class="avatar-image" alt="{{ dashboard.terrains.find(terrain).name }}"/>
+  <div class="avatar-content">
+    <div class="avatar-title">
+      {{ terrain.name }}
+    </div>
+    <div class="avatar-subtitle">
+      {{ terrain.scientific }}
+    </div>
   </div>
-  <div class="name">{{ terrain.name }}</div>
-  <ul class="stats">
-    <li>{{ terrain.stats.land }} land</li>
-    <li>{{ terrain.stats.water }} water</li>
+  <ul class="avatar-stats">
+    <li>
+      <span class="stat">{{ terrain.stats.land }}</span>
+      <span class="label">land</span>
+    </li>
+    <li>
+      <span class="stat">{{ terrain.stats.water }}</span>
+      <span class="label">water</span>
+    </li>
   </ul>
 </div>

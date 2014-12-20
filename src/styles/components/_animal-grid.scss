@@ -1,0 +1,19 @@
+@import "../variables";
+
+.animal-grid {
+  list-style-type: none;
+
+  & > li {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba($light-grey, 0.1);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba($primary, 0.1);
+    }
+  }
+}

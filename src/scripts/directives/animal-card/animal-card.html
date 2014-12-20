@@ -1,10 +1,21 @@
-<div class="card animal">
-  <div class="photo">
-    <img ng-src="images/{{ animal.id }}.png" alt=""/>
+<div class="avatar">
+  <img ng-src="images/{{ animal.id }}.png" class="avatar-image" alt="{{ dashboard.animals.find(animal).name }}"/>
+  <div class="avatar-content">
+    <div class="avatar-title">
+      {{ animal.name }}
+    </div>
+    <div class="avatar-subtitle">
+      {{ animal.scientific }}
+    </div>
   </div>
-  <div class="name">{{ animal.name }}</div>
-  <ul class="stats">
-    <li>{{ animal.stats.ferocity }} ferocity</li>
-    <li>{{ animal.stats.tenacity }} tenacity</li>
+  <ul class="avatar-stats">
+    <li>
+      <span class="stat">{{ animal.stats.ferocity }}</span>
+      <span class="label">ferocity</span>
+    </li>
+    <li>
+      <span class="stat">{{ animal.stats.tenacity }}</span>
+      <span class="label">tenacity</span>
+    </li>
   </ul>
 </div>
